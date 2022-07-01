@@ -1,20 +1,18 @@
 import styled from '@emotion/styled'
-import { Typography } from '@mui/material'
 import React from 'react'
+import { CometaSmallTypography, CometaTypography } from '../../Shared'
 
 export interface SummaryProps {
   title: string,
   description?: string,
 }
 
-const StyledTitle = styled(Typography)({
+const StyledTitle = styled(CometaTypography)({
   fontWeight: '700',
-  color: '#333333',
 })
 
-const StyledDetail = styled(Typography)({
+const StyledDetail = styled(CometaSmallTypography)({
   color: '#979797',
-  fontSize: '.85rem',
 })
 
 export const Summary = ({ title, description }: SummaryProps) => {
