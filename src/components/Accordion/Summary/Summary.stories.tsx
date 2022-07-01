@@ -9,8 +9,13 @@ export default {
 
 const Template: Story<SummaryProps> = (args) => <Summary {...args} />;
 
-export const Price = Template.bind({});
-Price.args = {
-  title: 'Price',
-  description: '$100',
+export const Base = Template.bind({});
+Base.args = {
+  title: 'Cuotas pendientes',
+  description: 'Puedes seleccionar mas de uno',
+};
+
+export const noDescription = Template.bind({});
+noDescription.args = {
+  title: 'Cuotas futuras',
 };
