@@ -1,12 +1,64 @@
+import styled from '@emotion/styled'
 import React from 'react'
+import { CometaTypography, CometaSmallTypography } from '../../Shared'
 
 export interface DetailRowProps {
   title: string,
   description: string,
+  onlySummary?: boolean,
+  amount?: string,
+  amountSubtext?: string,
+  discount?: string,
 }
 
-export const DetailRow = ({ title, description }: DetailRowProps) => {
+const Container = styled('div')({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+})
+
+const StyledTitle = styled(CometaTypography)({
+  fontWeight: '500',
+})
+
+const GrayLinedTypography = styled(CometaTypography)({
+  color: '#828282',
+  textDecoration: 'line-through',
+  marginRight: '0.5rem',
+  fontWeight: '300',
+})
+
+const ContainerRightAligned = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-end',
+})
+
+export const DetailRow = ({
+  title,
+  description,
+  amount,
+  amountSubtext,
+  discount,
+  onlySummary = false,
+}: DetailRowProps) => {
   return (
-    <div>{title} - {description}</div>
+    <Container>
+      <div>
+        <StyledTitle>{title}</StyledTitle>
+        <CometaSmallTypography>{description}</CometaSmallTypography>
+      </div>
+      {
+        !onlySummary && (
+          <ContainerRightAligned>
+            <Container>
+              { discount && <GrayLinedTypography>{discount}</GrayLinedTypography> }
+              { amount && <CometaTypography>{amount}</CometaTypography> }
+            </Container>
+            { amountSubtext && <CometaSmallTypography>{amountSubtext}</CometaSmallTypography> }
+          </ContainerRightAligned>
+        )
+      }
+    </Container>
   )
 }
