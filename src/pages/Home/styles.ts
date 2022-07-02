@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Paper } from '@mui/material';
+import { Button, Paper } from '@mui/material';
 import { CometaTypography } from '../../components';
 
 export const FlexContainer = styled('div')({
@@ -13,7 +13,8 @@ export const Card = styled(Paper)({
 });
 
 export const Background = styled('div')({
-  backgroundColor: '#A3A3A3',
+  backgroundColor: '#F3F3F3',
+  padding: '0 1rem 1rem 1rem',
 });
 
 export const StyledCometaTypography = styled(CometaTypography)({
@@ -21,7 +22,13 @@ export const StyledCometaTypography = styled(CometaTypography)({
 });
 
 export const AccordionItem = styled('div')`
+  display: flex;
+
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
 `;
+
+export const StyledButton = styled(Button)({
+  marginTop: '1rem',
+});

@@ -15,6 +15,7 @@ const Container = styled('div')({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
+  width: '100%',
 })
 
 const StyledTitle = styled(CometaTypography)({
@@ -51,10 +52,10 @@ export const DetailRow = ({
       {
         !onlySummary && (
           <ContainerRightAligned>
-            <Container>
+            <ContainerRightAligned>
               { discount && <GrayLinedTypography>{discount}</GrayLinedTypography> }
               { amount && <CometaTypography>{amount}</CometaTypography> }
-            </Container>
+            </ContainerRightAligned>
             { amountSubtext && <CometaSmallTypography>{amountSubtext}</CometaSmallTypography> }
           </ContainerRightAligned>
         )
