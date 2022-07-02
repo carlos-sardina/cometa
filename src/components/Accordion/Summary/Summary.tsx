@@ -7,6 +7,11 @@ export interface SummaryProps {
   description?: string,
 }
 
+const Container = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+})
+
 const StyledTitle = styled(CometaTypography)({
   fontWeight: '700',
 })
@@ -17,11 +22,11 @@ const StyledDetail = styled(CometaSmallTypography)({
 
 export const Summary = ({ title, description }: SummaryProps) => {
   return (
-    <>
+    <Container>
       <StyledTitle>{title}</StyledTitle>
       {
         description && <StyledDetail>{description}</StyledDetail>
       }
-    </>
+    </Container>
   )
 }
