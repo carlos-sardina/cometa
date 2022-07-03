@@ -1,13 +1,13 @@
-import styled from '@emotion/styled'
-import React from 'react'
-import { CometaTypography } from '../Shared'
+import styled from '@emotion/styled';
+import React from 'react';
+import { CometaTypography } from '../Shared';
 
 export interface HeaderProps {
-  title?: string,
-  logoUrl?: string,
+  title?: string;
+  logoUrl?: string;
 }
 
-const Container = styled('div')({
+const Container = styled('header')({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -17,18 +17,18 @@ const Container = styled('div')({
   width: '100%',
   top: 0,
   zIndex: 9999,
-})
+});
 
 const ImgContainer = styled('div')({
   width: '50px',
   height: '50px',
   marginRight: '1.25rem',
-})
+});
 
 const StyledImage = styled('img')({
   maxWidth: '100%',
   maxHeight: '100%',
-})
+});
 
 export const Header = ({ title, logoUrl }: HeaderProps) => {
   return (
@@ -38,5 +38,5 @@ export const Header = ({ title, logoUrl }: HeaderProps) => {
       </ImgContainer>
       <CometaTypography>{title}</CometaTypography>
     </Container>
-  )
-}
+  );
+};

@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
-import { Button, Paper } from '@mui/material';
+import { Paper } from '@mui/material';
 import { CometaTypography } from '../../components';
 
 export const FlexContainer = styled('div')({
   display: 'flex',
   justifyContent: 'space-between',
-})
+});
 
 export const Card = styled(Paper)({
   backgroundColor: '#FFFFFF',
