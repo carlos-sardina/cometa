@@ -30,6 +30,8 @@ export const AccordionItem = styled('div')`
   }
 `;
 
-export const StyledButton = styled(Button)({
+export const ButtonContainer = styled('div')({
   marginTop: '1rem',
+  display: 'flex',
+  justifyContent: 'center',
 });

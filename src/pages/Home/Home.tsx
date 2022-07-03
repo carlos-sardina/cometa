@@ -1,9 +1,9 @@
-import { Accordion, AccordionDetails, AccordionSummary, Checkbox, Grid } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Checkbox, Fab, Grid } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { ExpandMore } from '@mui/icons-material';
 import { Summary, DetailRow, CometaSmallTypography, Header } from '../../components';
-import { AccordionItem, Background, FlexContainer, StyledCometaTypography, Card, StyledButton } from './styles';
+import { AccordionItem, Background, FlexContainer, StyledCometaTypography, Card, ButtonContainer } from './styles';
 import { StudentInfo, StudentOrders } from '../../types';
 import { formatNumber, getStudentInfoData, getStudentOrdersData } from '../../utils';
 import moment from 'moment';
@@ -61,17 +61,10 @@ export const Home = () => {
                 </Grid>
               )
             }
-            {
-              !isTotalZero() && (
-                <Grid container direction='row' justifyContent='flex-end'>
-                  <StyledButton variant="contained">IR A PAGAR</StyledButton>
-                </Grid>
-              )
-            }
             <Grid item xs={12}>
               <Accordion>
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
+                  expandIcon={<ExpandMore />}
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
@@ -90,7 +83,7 @@ export const Home = () => {
             <Grid item xs={12}>
               <Accordion>
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
+                  expandIcon={<ExpandMore />}
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
@@ -110,7 +103,7 @@ export const Home = () => {
             <Grid item xs={12}>
               <Accordion>
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
+                  expandIcon={<ExpandMore />}
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
@@ -129,6 +122,15 @@ export const Home = () => {
             </Grid>
           </Grid>
         </Box>
+        {
+          !isTotalZero() && (
+            <ButtonContainer>
+              <Fab size='large' color='primary' variant='extended'>
+                IR A PAGAR
+              </Fab>
+            </ButtonContainer>
+          )
+        }
       </Background>
     </>
   )
