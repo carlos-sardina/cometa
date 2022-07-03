@@ -14,7 +14,8 @@ export const Card = styled(Paper)({
 
 export const Background = styled('div')({
   backgroundColor: '#F3F3F3',
-  padding: '0 1rem 1rem 1rem',
+  padding: '4rem 1rem 1rem 1rem',
+  minHeight: '100vh',
 });
 
 export const StyledCometaTypography = styled(CometaTypography)({
