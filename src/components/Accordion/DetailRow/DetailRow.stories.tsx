@@ -3,7 +3,7 @@ import React from 'react';
 import { DetailRow, DetailRowProps } from './DetailRow';
 
 export default {
-  title: 'Components/Accordion/DetailRow',
+  title: 'Components/DetailRow',
   component: DetailRow,
 };
 

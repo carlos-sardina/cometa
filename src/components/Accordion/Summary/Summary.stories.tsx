@@ -3,7 +3,7 @@ import React from 'react';
 import { Summary, SummaryProps } from './Summary';
 
 export default {
-  title: 'Components/Accordion/Summary',
+  title: 'Components/Summary',
   component: Summary,
 };
 
